@@ -7,6 +7,7 @@ app.use(bodyParser.json())
 app.use(cors());
 const { Sequelize } = require('sequelize');
 const path = require('path')
+const serverless = require('serverless-http');
 
 // Create a connection to the MySQL database
 const db = mysql.createPool({
