@@ -20,12 +20,14 @@ const db = mysql.createPool({
 // Connect to the database
 db.getConnection((err, connection) => {
   if (err) {
-    console.log('Error connecting to MySQL database');
-    throw err;
+    console.error('Error connecting to MySQL database:', err);
+    // Handle the error gracefully, e.g., show an error message to the user
+    return;
   }
   console.log('Connected to MySQL database');
   connection.release();
 });
+
 
 
 // Start the server and listen on port 3000
