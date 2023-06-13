@@ -7,11 +7,7 @@ app.use(bodyParser.json())
 app.use(cors());
 const { Sequelize } = require('sequelize');
 const path = require('path')
-const serverless = require('serverless-http');
-const router = express.Router()
 
-app.use('/.netlify/functions/api', router);
-module.exports.handler = serverless(app);
 // Create a connection to the MySQL database
 const db = mysql.createPool({
   host: '127.0.0.1',
