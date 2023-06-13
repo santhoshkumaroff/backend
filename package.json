@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev" : "nodemon index.js",
-    "build" : "npm i"
-  },
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
+    },
   "author": "Santhosh Kumar",
   "license": "ISC",
   "dependencies": {
