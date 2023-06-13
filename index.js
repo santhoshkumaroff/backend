@@ -14,7 +14,6 @@ const db = mysql.createPool({
   user: 'root',
   password: 'Jashwa@007',
   database: 'student',
-  port: 3306
 });
 
 // Connect to the database
@@ -33,7 +32,7 @@ db.getConnection((err, connection) => {
 // Start the server and listen on port 3000
 app.listen(3000, function check(err) {
   if (err) {
-    console.log("Error running server 3000")
+    console.log("Error running server 3000",err)
   }
   else {
     console.log('Server listening on port 3000.');
